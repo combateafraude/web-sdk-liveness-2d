@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Liveness 2D Playground</title>
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Liveness 2D Playground</h1>
+
+    <div id="livenessSdkContainer" class="child">
+      <div id="loader-container" class="loader-container" style="display: none;">
+        <div class="loader"></div>
+      </div>
+      <h3 id="message"></h3>
+    </div>
+
+    <div class="btn-container">
+      <button id="initializeButton" class="button">Initialize SDK</button>
+      <button id="captureButton" class="button">Execute capture</button>
+      <button id="closeButton" class="button">Close SDK</button>
+    </div>
+  </div>
+
+  <script src="./sdk/caf-faces2d-sdk.umd.js"></script>
+  <script src="./demo.js"></script>
+</body>
+</html>

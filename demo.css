@@ -1,0 +1,122 @@
+:root {
+  --color-primary-cafgreen-main: #34D690;
+  --color-primary-cafblue-main: #004AF7;
+  --color-warning-main: #E21B45;
+  --color-pending-main: #FF9500;
+  --color-neutral-black: #000000;
+  --color-neutral-600: #323232;
+  --color-neutral-400: #BDBDBD;
+  --color-neutral-300: #D1D1D1;
+  --color-neutral-100: #F9F9F9;
+  --color-neutral-white: #FFFFFF;
+}
+
+* {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: var(--color-neutral-100);
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-100);
+  border-radius: 16px;
+}
+
+.child {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #c7f5e2;
+  color: var(--color-neutral-white);
+  height: 80%;
+  width: 50%;
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 20px;
+  background-color: var(--color-primary-cafgreen-main);
+  padding: 16px;
+  border-radius: 2px;
+}
+
+.button {
+  background-color: var(--color-primary-cafblue-main);
+  color: var(--color-neutral-white);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #002F7F;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  color: var(--color-neutral-400);
+  background-color: var(--color-neutral-300);
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#message {
+  display: none;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  color: #f1f1f1;
+}
+
+.loadingMessage {
+  background-color: var(--color-pending-main);
+}
+
+.errorMessage {
+  background-color: var(--color-warning-main);
+}
+
+.successMessage {
+  background-color: var(--color-primary-cafblue-main);
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 14px solid var(--color-neutral-300);
+  border-top: 14px solid var(--color-primary-cafblue-main);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
